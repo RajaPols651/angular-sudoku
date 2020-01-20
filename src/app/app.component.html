@@ -1,0 +1,9 @@
+<app-toolbar (solve)="solveSudoku($event)"></app-toolbar>
+<div class="container">
+   <div class="row">
+        <div class="col-sm-12">
+            <app-board (Completed)="onGameCompleted($event)" [boardArray]="game.board" #board [keyeventObservable]="keyboardEventObservable"></app-board>
+        </div>
+        <!-- <div class="col-sm-4">Users online</div>     -->
+    </div>
+</div>

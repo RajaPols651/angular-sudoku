@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    height: 1200px;
+    background: #282537;
+    background-image: -webkit-radial-gradient(top, circle farthest-corner, #3c3b52 0%, #252233 80%);
+    background-image: -moz-radial-gradient(top, circle farthest-corner, #3c3b52 0%, #252233 80%);
+    background-image: -o-radial-gradient(top, circle farthest-corner, #3c3b52 0%, #252233 80%);
+    background-image: radial-gradient(top, circle farthest-corner, #3c3b52 0%, #252233 80%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+  }
+  body h1,
+  body h2 {
+    color: #FFF;
+    text-align: center;
+  }
+  body h1 {
+    font-size: 48px;
+  }
+  body h2 {
+    font-size: 20px;
+  }

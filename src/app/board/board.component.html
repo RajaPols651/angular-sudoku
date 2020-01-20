@@ -1,0 +1,66 @@
+<section class="sudoku">
+    <div class="sudoku-row" *ngFor="let row of rows; index as i">
+        <div class="sudoku-square" *ngFor="let box of rowBoxes[i]" >
+            <div (click)="onSelectCell(cell)" [ngClass]="{'cell': true, 'filled': cell.num > 0}" *ngFor="let cell of board.getBox(box)">
+                <a [ngClass]="{'cell-value': true, 'invalid-cell': cell.isInvalid, 'selected': cell.selected}">
+                    <div *ngIf="cell.num > 0">{{cell.num}}</div>
+                </a>
+                <div *ngIf="cell.num == 0" class="container">
+                    <div>
+                        <div>
+                            <span [ngClass]="{'label': true, 'selected': cell.notes[1]}" 
+                            (click) = "toggleNote(cell, 1)">1</span>
+                        </div>
+                        <div>
+                            <span style="left:20px" [ngClass]="{'label': true, 'selected': cell.notes[2]}" 
+                            (click) = "toggleNote(cell, 2)">2</span>
+                        </div>
+                        <div>
+                            <span style="left: 40px" [ngClass]="{'label': true, 'selected': cell.notes[3]}" 
+                            (click) = "toggleNote(cell, 3)">3</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span style="top: 15px" [ngClass]="{'label': true, 'selected': cell.notes[4]}" 
+                            (click) = "toggleNote(cell, 4)">4</span>
+                        </div>
+                        <div>
+                            <span style="left:20px; top: 15px" [ngClass]="{'label': true, 'selected': cell.notes[5]}" 
+                            (click) = "toggleNote(cell, 5)">5</span>
+                        </div>
+                        <div>
+                            <span style="left: 40px; top: 15px" [ngClass]="{'label': true, 'selected': cell.notes[6]}" 
+                            (click) = "toggleNote(cell, 6)">6</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <span style="top: 30px" [ngClass]="{'label': true, 'selected': cell.notes[7]}" 
+                            (click) = "toggleNote(cell, 7)">7</span>
+                        </div>
+                        <div>
+                            <span style="left:20px; top: 30px" [ngClass]="{'label': true, 'selected': cell.notes[8]}" 
+                            (click) = "toggleNote(cell, 8)">8</span>
+                        </div>
+                        <div>
+                            <span style="left: 40px; top: 30px" [ngClass]="{'label': true, 'selected': cell.notes[9]}" 
+                            (click) = "toggleNote(cell, 9)">9</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="select-row">
+        <div (click)="selectNumber(num)" class="cell" *ngFor="let num of availableNumbers">
+            <a class="cell-value">{{num}}</a>
+        </div>
+    </div>
+</section>
