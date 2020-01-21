@@ -9,7 +9,7 @@ app.use(express.static('./dist/sudoku-live'));
 
 app.get('/*', function(req,res) {
     //res.sendFile(path.join(__dirname,'/dist/sudoku-live/index.html'));
-  res.sendFile('/dist/sudoku-live/index.html');
+  res.sendFile(path.resolve('dist/sudoku-live/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
