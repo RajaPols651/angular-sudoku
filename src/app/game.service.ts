@@ -27,9 +27,7 @@ export class GameService {
     if(offline){
       board = SudokuAlgo.generateSudokuBoard();
     }
-    else{
-      this.http.get(environment.baseUrl + '/api/games/');
-    }
+    
     this.timerService.startTicker();
     return new Game(level, board);
   }
