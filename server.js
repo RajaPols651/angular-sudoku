@@ -1,16 +1,17 @@
 //Install express server
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 
+const root = './';
+const port = process.env.PORT || '8080';
 const app = express();
 
-// Serve only the static files form the dist directory
-app.use(express.static('./dist/sudoku-live'));
-
-app.get('/*', function(req,res) {
-    //res.sendFile(path.join(__dirname,'/dist/sudoku-live/index.html'));
-  res.sendFile(path.resolve('dist/sudoku-live/index.html'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(root, 'dist/sudoku-live')));
+app.get('*', (req, res) => {
+  res.sendFile('dist/sudoku-live/index.html', {root});
 });
 
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
+app.listen(port, () => console.log(`API running on localhost:${port}`));
