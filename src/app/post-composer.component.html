@@ -1,0 +1,135 @@
+<div style="height: auto; width:400px">
+  <div>
+    Create Post
+  </div>
+  <div>
+    <div>
+      <div style="float: left;">
+        <div><a aria-label="Profile of Raja Polavarapu" class="_3hvt"
+            href="https://www.facebook.com/raja.polavarapu.73?fref=comp">
+            <img
+              src="https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-1/cp0/c5.5.65.65a/296820_4320193000385_1576063897_n.jpg?_nc_cat=104&amp;_nc_sid=dbb9e7&amp;_nc_ohc=BGKxlgGg6wUAX_ORBmm&amp;_nc_ht=scontent-dfw5-2.xx&amp;oh=a7a293f484aef58f4f18ae88d4afd821&amp;oe=5EA6A716"
+              height="40" width="40" alt=""></a>
+        </div>
+      </div>
+      <div class="_3nd0">
+        <div class="_1mwp" role="presentation">
+          <div class="_5yk2" tabindex="-1">
+            <div class="_5rp7">
+              <div *ngIf="messageEmpty" class="_1plt">
+                <div class="_1p1v" id="placeholder-6fiju" style="white-space: pre-wrap;">What's on your mind?</div>
+              </div>
+              <div class="_5prb">
+                <div #editor (keyup)="onMessageChange($event)" class="editor"
+                  aria-describedby="placeholder-6fiju" contenteditable="true" aria-multiline="true" spellcheck="true"
+                  aria-label="what's on your mind?" role="textbox" aria-autocomplete="list"
+                  style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;">
+                  <div data-contents="true">
+                    <div *ngFor="let m of messages" class="" data-block="true" data-editor="17v3l"
+                      data-offset-key="7vgf0-0-0">
+                      <div data-offset-key="7vgf0-0-0" class="_1mf">
+                        <span data-offset-key="7vgf0-0-0">
+                          <ng-container *ngIf="m.length > 0">
+                            <span data-text="true">{{m}}</span>
+                          </ng-container>
+                          <ng-container *ngIf="m.length == 0">
+                            <br  data-text="true">
+                          </ng-container>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div *ngIf="photoUploads.length > 0" style="height:112px;overflow-wrap:break-word; direction:ltr;overflow-x:hidden; 
+      overflow-y:hidden;font-size:12px; line-height:16.08px;position:relative">
+      <div style="overflow-x: auto;position:relative;height:168px;">
+        <div style="height:112px;display:inline-block;position:relative;white-space:nowrap;">
+          <div id="photos" style="height: 104px;font-size:12px; direction:ltr;user-select:none;
+    display:block;line-height:16.08px;white-space:nowrap">
+            <div *ngFor="let p of photoUploads" role="presentation"
+              style="display:inline-block;margin-left:7px;overflow-wrap:break-word;vertical-align:top;">
+              <div>
+                <span>
+                  <div aria-haspopup="true" class="_jfc" style="width: 100px;height: 100px;">
+                    <img alt="91327889_10220423013742767_455199269893177344_n.jpg" style="border:0" [src]="p.thumbUrl"
+                      width="100" height="100" />
+                    <button (click)="removePhoto(p)" class="_jfe" type="button" title="Remove photo">Remove
+                      photo</button>
+
+                    <div class="_jfi" id="js_rvk" role="presentation" tabindex="-1" aria-haspopup="true">
+
+                    </div>
+
+                  </div>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div style="
+        direction: ltr;
+        line-height: 1.34;
+        font-size: 12px;
+        -webkit-font-smoothing: subpixel-antialiased;
+        color: #1d2129;
+        white-space: nowrap;
+        display: inline-block;
+        position: absolute;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        height: 7px;
+        z-index: 5;
+        visibility: hidden;
+        font-family: inherit;
+        opacity: 0;">
+        <div style="
+          direction: ltr;
+          line-height: 1.34;
+          font-size: 12px;
+          -webkit-font-smoothing: subpixel-antialiased;
+          color: #1d2129;
+          white-space: nowrap;
+          visibility: hidden;
+          background-clip: content-box;
+          background-color: rgba(0, 0, 0, .4);
+          border: 1px solid rgba(85, 85, 85, .6);
+          border-radius: 7px;
+          position: absolute;
+          transition: 25ms;
+          height: 5px;
+          display: none !important;
+          font-family: inherit;"></div>
+      </div>
+    </div>
+
+    <hr class="_hr" style="border-bottom-color: rgb(218, 221, 225);">
+
+    <div style="margin-top: 5px;">
+      <mat-chip-list aria-label="Fish selection">
+        <input hidden type="file" #file (change)="uploadFile(file.files)" />
+        <mat-chip (click)="file.click()">
+          <img src="https://img.icons8.com/plasticine/25/000000/stack-of-photos.png" />
+          Photo</mat-chip>
+        <mat-chip>Hosting</mat-chip>
+        <mat-chip>Travel</mat-chip>
+      </mat-chip-list>
+    </div>
+
+    <div style="margin-top: 5px; float:right">
+      <button mat-flat-button color="primary" (click)="submitPost()">Post</button>
+    </div>
+  </div>
+</div>

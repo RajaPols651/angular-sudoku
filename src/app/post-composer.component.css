@@ -1,0 +1,229 @@
+
+
+._jfe {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+margin: 0;
+display: inline-block;
+text-decoration: none;
+white-space: nowrap;
+height: 12px;
+width: 12px;
+background-color: transparent;
+border: 0 none;
+cursor: pointer;
+font-size: 0 !important;
+overflow: hidden;
+padding: 0;
+vertical-align: middle;
+opacity: 0;
+position: absolute;
+right: 5px;
+top: 5px;
+z-index: 1;
+background-image: url(https://www.facebook.com/rsrc.php/v3/yf/r/iodE7ueAuBz.png);
+background-repeat: no-repeat;
+background-size: 28px 294px;
+background-position: 0 -281px;
+font-family: inherit;
+}
+
+._jfi{
+    color: #1d2129;
+    bottom: 0;
+    left: 0;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+._jfi:after{
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+    width: 100%;
+}
+
+._jfc {
+    display:inline-block;
+    position:relative;
+    margin-left:5px;
+}
+
+._jfc:hover ._jfi:after, ._jfc:focus ._jfi:after, ._jfe:focus~._jfi:after, ._43p_ ._jfi:after {
+    background: rgba(0,0,0,.4);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+._jfc:after {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.editor {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+height: inherit;
+text-align: initial;
+-webkit-user-modify: read-write-plaintext-only;
+font-family: inherit;
+outline: none;
+user-select: text;
+white-space: pre-wrap;
+overflow-wrap: break-word;
+}
+
+._3nd0 {
+direction: ltr;
+line-height: 1.34;
+font-size: 12px;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+overflow: hidden;
+position: relative;
+font-family: inherit;
+}
+
+._1mwp {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+background: #fff;
+cursor: text;
+background-color: transparent;
+border: 0;
+box-sizing: border-box;
+height: 100%;
+outline: 0;
+padding: 13px 12px;
+resize: none;
+word-wrap: break-word;
+padding-right: 48px;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+min-height: 71px;
+max-height: none;
+padding-top: 18px;
+font-family: inherit;
+}
+
+._5yk2 {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+font-family: inherit;
+}
+
+._5rp7 {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+height: inherit;
+text-align: initial;
+position: relative;
+font-family: inherit;
+}
+
+._1plt {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+text-align: initial;
+color: #90949c;
+position: absolute;
+z-index: 1;
+font-family: inherit;
+}
+
+._1p1v {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+text-align: initial;
+color: #90949c;
+font-family: inherit;
+white-space: pre-wrap;
+}
+
+._5prb {
+direction: ltr;
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+height: inherit;
+text-align: initial;
+background-color: rgba(255, 255, 255, 0);
+border-left: .1px solid transparent;
+position: relative;
+z-index: 1;
+font-family: inherit;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+._1mf {
+-webkit-font-smoothing: subpixel-antialiased;
+list-style: none;
+color: #1c1e21;
+cursor: text;
+font-size: 24px;
+font-weight: 300;
+letter-spacing: 0;
+line-height: 28px;
+-webkit-user-modify: read-write-plaintext-only;
+user-select: text;
+overflow-wrap: break-word;
+position: relative;
+white-space: pre-wrap;
+direction: ltr;
+text-align: left;
+font-family: inherit;
+}
